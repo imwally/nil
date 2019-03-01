@@ -6,16 +6,21 @@ from pathlib import Path
 # Home Directory
 home = str(Path.home())
 
+DEFAULT_LANG = 'en'
+DEFAULT_PAGINATION = 4
+
 AUTHOR = 'Wally Jones'
 SITENAME = '&Nopf;'
-SITEURL = ''
+SITEURL = 'http://nil.wallyjones.com'
 THEME = home+'/src/niltheme'
 PATH = 'content'
 TIMEZONE = 'America/New_York'
 
-DEFAULT_LANG = 'en'
-DEFAULT_PAGINATION = 4
+ARTICLE_URL = '{slug}'
+ARTICLE_SAVE_AS = '{slug}/index.html'
+PAGE_URL = '{slug}'
+PAGE_SAVE_AS = '{slug}/index.html'
 
 LINKS = (('About', '/'),
-         ('Archives', '/archives.html'),
+         ('Archives', '/archives'),
          ('Feed', '/feeds/all.atom.xml'))
