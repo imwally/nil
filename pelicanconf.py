@@ -16,9 +16,9 @@ THEME = home+'/src/niltheme'
 PATH = 'content'
 TIMEZONE = 'America/New_York'
 
-ARTICLE_URL = '{slug}'
+ARTICLE_URL = '{slug}/'
 ARTICLE_SAVE_AS = '{slug}/index.html'
-PAGE_URL = '{slug}'
+PAGE_URL = '{slug}/'
 PAGE_SAVE_AS = '{slug}/index.html'
 
 LINKS = (('About', '/'),
