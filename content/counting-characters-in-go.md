@@ -217,7 +217,7 @@ And what the output now looks like:
 ## What is a String?
 
 - A string is a slice of bytes.
-- A "character" isn't necessarily made of single byte.
+- A "character" isn't necessarily made of a single byte.
 - A `for range` on a string loops over one UTF-8 code point or what is called
   a rune in Go on each iteration.
 - Each time around the loop, the index of the loop is the starting position
