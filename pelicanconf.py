@@ -7,7 +7,6 @@ from pathlib import Path
 home = str(Path.home())
 
 DEFAULT_LANG = 'en'
-DEFAULT_PAGINATION = 4
 
 AUTHOR = 'Wally Jones'
 SITENAME = '&Nopf;'
@@ -16,10 +15,10 @@ THEME = home+'/src/niltheme'
 PATH = 'content'
 TIMEZONE = 'America/New_York'
 
+ARCHIVES_URL = 'archives'
+ARCHIVES_SAVE_AS = 'archives/index.html'
 ARTICLE_URL = '{slug}/'
 ARTICLE_SAVE_AS = '{slug}/index.html'
-PAGE_URL = '{slug}/'
-PAGE_SAVE_AS = '{slug}/index.html'
 
 LINKS = (('About', '/'),
          ('Archives', '/archives'),
