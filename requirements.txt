@@ -1,0 +1,2 @@
+pelican==3.7.1
+Fabric==2.5.0
