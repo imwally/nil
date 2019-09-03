@@ -6,7 +6,7 @@ DEFAULT_LANG = 'en'
 
 AUTHOR = 'Wally Jones'
 SITENAME = '&Nopf;'
-SITEURL = 'http://nil.wallyjones.com'
+SITEURL = 'https://nil.wallyjones.com'
 THEME = 'niltheme'
 PATH = 'content'
 TIMEZONE = 'America/New_York'
