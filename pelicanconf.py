@@ -1,17 +1,13 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
-from pathlib import Path
-
-# Home Directory
-home = str(Path.home())
 
 DEFAULT_LANG = 'en'
 
 AUTHOR = 'Wally Jones'
 SITENAME = '&Nopf;'
 SITEURL = 'http://nil.wallyjones.com'
-THEME = home+'/src/niltheme'
+THEME = 'niltheme'
 PATH = 'content'
 TIMEZONE = 'America/New_York'
 

@@ -1,0 +1,3 @@
+[submodule "niltheme"]
+	path = niltheme
+	url = https://github.com/imwally/niltheme.git
