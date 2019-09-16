@@ -1,5 +1,5 @@
 Title: What Happens When You Connect to Starbucks Wi-Fi
-Date: 2019-09-16T19:14:23-0400
+Date: 2019-09-16T12:15:00-0400
 Category: programming
 Tags: networking starbucks scripts
 
