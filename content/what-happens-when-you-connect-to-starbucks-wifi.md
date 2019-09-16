@@ -165,7 +165,7 @@ Oh, look, another redirect. This time to a new location `/signup` with a rather
 long `data` parameter slapped on the end.
 
 ```
-/signup?data=CTx0BMW%2FoKy7yMRAYcKD8Bs%2Bnggy0mPOlILmmhDroh2tAF7buSPIJABsASKvRhwdejvMzywSVTvbJQj92jaWFbz127bgNyNy54Q7TeOxkIqIcbY7d5B3%2FtfFXoIEtuibv%2BVPyP2Cno4%2FZMeV2twc3s2CtE2W2cmVArOOJafM9Fs%3D
+https://sbux-portal.globalreachtech.com:443/signup?data=CTx0BMW%2FoKy7yMRAYcKD8Bs%2Bnggy0mPOlILmmhDroh2tAF7buSPIJABsASKvRhwdejvMzywSVTvbJQj92jaWFbz127bgNyNy54Q7TeOxkIqIcbY7d5B3%2FtfFXoIEtuibv%2BVPyP2Cno4%2FZMeV2twc3s2CtE2W2cmVArOOJafM9Fs%3D
 ```
 
 Ok, what happens when we request that?
