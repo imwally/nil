@@ -382,7 +382,7 @@ Phew. Finally we're authenticated.
 
 * I believe the `/check` redirect checks if you've previously signed up before.
   If so, it skips the `/signup` redirect and takes you directly to the hidden
-  login form page. Probably checks something in that long `data` parameter.
+  login form page. Probably has something to do with that long `data` parameter.
 * Modifying the parameters in the first redirect changes the device-specific
   credentials. Using those credentials on the final login form sends you to an
   error page.
