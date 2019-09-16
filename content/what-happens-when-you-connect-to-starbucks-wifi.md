@@ -9,10 +9,10 @@ click the big green "Accept & Connect" button.
 ![Starbucks Wi-Fi from Google by Chris Messina](/images/starbucks_captive.jpg)
 _[Image by Chris Messina](https://www.flickr.com/photos/factoryjoe/22127717262)_
 
-If you were running Linux like I was at the time, you wouldn't see the fancy
-captive portal pop-up as you would see on macOS. Instead, you would be
-redirected to the captive portal page within your browser after trying to visit
-a website. 
+However, if you were running GNU/Linux like I was at the time, you wouldn't see
+the fancy captive portal pop-up as you would see on macOS. Instead, you would
+be redirected to the captive portal page within your browser after trying to
+visit a website. 
 
 There were a few problems though. I was using the [HTTPS
 Everywhere](https://www.eff.org/https-everywhere) browser add-on which needed
