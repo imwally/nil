@@ -262,7 +262,7 @@ $ curl --data-urlencode fname="Mattie" \
 Hmm, we hit a login page with a hidden form ...
 
 ```
-> POST /signup?data=CTx0BMW%2FoKy7yMRAYcKD8Bs%2Bnggy0mPOlILmmhDroh2tAF7buSPIJABsASKvRhwd6ntnnR2DqReIJPrlY%2BUgIhNPVMmVQEDe4K2pG0QXt4%2FSZDoO7cLoUz56SoQpjRWB3TZcih9J7ktuNiYQoS8sMWkAaVeDiPwh2VUYIXN94pQ%3D HTTP/1.1
+> POST /signup?data=CTx0BMW%2FoKy7yMRAYcKD8Bs%2Bnggy0mPOlILmmhDroh2tAF7buSPIJABsASKvRhwdejvMzywSVTvbJQj92jaWFbz127bgNyNy54Q7TeOxkIqIcbY7d5B3%2FtfFXoIEtuibv%2BVPyP2Cno4%2FZMeV2twc3s2CtE2W2cmVArOOJafM9Fs%3D HTTP/1.1
 > Host: sbux-portal.globalreachtech.com
 > User-Agent: curl/7.54.0
 > Accept: */*
