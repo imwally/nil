@@ -14,13 +14,13 @@ captive portal pop-up as you would see on macOS. Instead, you would be
 redirected to the captive portal page within your browser after trying to visit
 a website. 
 
-There was a problem though. I was using the [HTTPS
+There were a few problems though. I was using the [HTTPS
 Everywhere](https://www.eff.org/https-everywhere) browser add-on which needed
 to be disabled before I could proceed to the "Accept & Connect" page. Sometimes
-I forgot to re-enable the add-on after connecting. There were also times where
-I booted up my machine and jumped right into a terminal only to realize I
-didn't authenticate to the Wi-Fi yet. This was all very annoying, so I decided
-to automate the process with a shell script and a bit of `curl`. 
+I forgot to re-enable the add-on after connecting. Other times I booted up my
+machine and jumped right into a terminal only to realize I didn't authenticate
+to the Wi-Fi yet. This was all very annoying, so I decided to automate the
+process with a shell script and a bit of `curl`. 
 
 After poking around in the markup of the portal page I saw that it contained a
 simple form which takes parameters from the URL, such as your MAC address and
