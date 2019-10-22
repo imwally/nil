@@ -19,3 +19,9 @@ ARTICLE_SAVE_AS = '{slug}/index.html'
 LINKS = (('About', '/'),
          ('Archives', '/archives'),
          ('Feed', '/feeds/all.atom.xml'))
+
+STATIC_PATHS = ['extra/robots.txt', 'extra/favicon.ico']
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/favicon.ico': {'path': 'favicon.ico'}
+}
