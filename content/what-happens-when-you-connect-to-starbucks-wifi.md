@@ -1,5 +1,5 @@
 Title: What Happens When You Connect to Starbucks Wi-Fi
-Date: 2019-09-16T19:14:23-0400
+Date: 2019-09-16T12:15:00-0400
 Category: programming
 Tags: networking starbucks scripts
 
@@ -9,18 +9,19 @@ click the big green "Accept & Connect" button.
 ![Starbucks Wi-Fi from Google by Chris Messina](/images/starbucks_captive.jpg)
 _[Image by Chris Messina](https://www.flickr.com/photos/factoryjoe/22127717262)_
 
-If you were running Linux like I was at the time, you wouldn't see the fancy
-captive portal pop-up as you would see on macOS. Instead, you would be
-redirected to the captive portal page within your browser after trying to visit
-a website. 
+However, if you were running GNU/Linux like I was at the time, you wouldn't see
+the fancy captive portal pop-up as you would see on macOS. Instead, you would
+be redirected to the captive portal page within your browser after trying to
+visit a website. 
 
-There was a problem though. I was using the [HTTPS
+There were a few problems though. I was using the [HTTPS
 Everywhere](https://www.eff.org/https-everywhere) browser add-on which needed
 to be disabled before I could proceed to the "Accept & Connect" page. Sometimes
-I forgot to re-enable the add-on after connecting. There were also times where
-I booted up my machine and jumped right into a terminal only to realize I
-didn't authenticate to the Wi-Fi yet. This was all very annoying, so I decided
-to automate the process with a shell script and a bit of `curl`. 
+I forgot to re-enable the add-on after connecting. Other times I booted up my
+machine and jumped right into a terminal only to realize I didn't authenticate
+to the Wi-Fi yet. This was all very annoying. I decided to automate the
+process with a shell script and a bit of `curl` so I could authenticate from
+the comfort of my own terminal.
 
 After poking around in the markup of the portal page I saw that it contained a
 simple form which takes parameters from the URL, such as your MAC address and
@@ -165,13 +166,13 @@ Oh, look, another redirect. This time to a new location `/signup` with a rather
 long `data` parameter slapped on the end.
 
 ```
-/signup?data=CTx0BMW%2FoKy7yMRAYcKD8Bs%2Bnggy0mPOlILmmhDroh2tAF7buSPIJABsASKvRhwdejvMzywSVTvbJQj92jaWFbz127bgNyNy54Q7TeOxkIqIcbY7d5B3%2FtfFXoIEtuibv%2BVPyP2Cno4%2FZMeV2twc3s2CtE2W2cmVArOOJafM9Fs%3D
+https://sbux-portal.globalreachtech.com:443/signup?data=CTx0BMW%2FoKy7yMRAYcKD8Bs%2Bnggy0mPOlILmmhDroh2tAF7buSPIJABsASKvRhwdejvMzywSVTvbJQj92jaWFbz127bgNyNy54Q7TeOxkIqIcbY7d5B3%2FtfFXoIEtuibv%2BVPyP2Cno4%2FZMeV2twc3s2CtE2W2cmVArOOJafM9Fs%3D
 ```
 
 Ok, what happens when we request that?
 
 ```
-> GET /signup?data=CTx0BMW%2FoKy7yMRAYcKD8Bs%2Bnggy0mPOlILmmhDroh2tAF7buSPIJABsASKvRhwd6ntnnR2DqReIJPrlY%2BUgIhNPVMmVQEDe4K2pG0QXt4%2FSZDoO7cLoUz56SoQpjRWB3TZcih9J7ktuNiYQoS8sMWkAaVeDiPwh2VUYIXN94pQ%3D HTTP/1.1
+> GET /signup?data=CTx0BMW%2FoKy7yMRAYcKD8Bs%2Bnggy0mPOlILmmhDroh2tAF7buSPIJABsASKvRhwdejvMzywSVTvbJQj92jaWFbz127bgNyNy54Q7TeOxkIqIcbY7d5B3%2FtfFXoIEtuibv%2BVPyP2Cno4%2FZMeV2twc3s2CtE2W2cmVArOOJafM9Fs%3D HTTP/1.1
 > Host: sbux-portal.globalreachtech.com
 > User-Agent: curl/7.54.0
 > Accept: */*
@@ -262,7 +263,7 @@ $ curl --data-urlencode fname="Mattie" \
 Hmm, we hit a login page with a hidden form ...
 
 ```
-> POST /signup?data=CTx0BMW%2FoKy7yMRAYcKD8Bs%2Bnggy0mPOlILmmhDroh2tAF7buSPIJABsASKvRhwd6ntnnR2DqReIJPrlY%2BUgIhNPVMmVQEDe4K2pG0QXt4%2FSZDoO7cLoUz56SoQpjRWB3TZcih9J7ktuNiYQoS8sMWkAaVeDiPwh2VUYIXN94pQ%3D HTTP/1.1
+> POST /signup?data=CTx0BMW%2FoKy7yMRAYcKD8Bs%2Bnggy0mPOlILmmhDroh2tAF7buSPIJABsASKvRhwdejvMzywSVTvbJQj92jaWFbz127bgNyNy54Q7TeOxkIqIcbY7d5B3%2FtfFXoIEtuibv%2BVPyP2Cno4%2FZMeV2twc3s2CtE2W2cmVArOOJafM9Fs%3D HTTP/1.1
 > Host: sbux-portal.globalreachtech.com
 > User-Agent: curl/7.54.0
 > Accept: */*
@@ -382,7 +383,7 @@ Phew. Finally we're authenticated.
 
 * I believe the `/check` redirect checks if you've previously signed up before.
   If so, it skips the `/signup` redirect and takes you directly to the hidden
-  login form page. Probably checks something in that long `data` parameter.
+  login form page. Probably has something to do with that long `data` parameter.
 * Modifying the parameters in the first redirect changes the device-specific
   credentials. Using those credentials on the final login form sends you to an
   error page.
