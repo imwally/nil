@@ -6,7 +6,7 @@ Tags: networking starbucks scripts
 Back in the day, if you wanted to use Wi-Fi at Starbucks all you had to do was
 click the big green "Accept & Connect" button.
 
-![Starbucks Wi-Fi from Google by Chris Messina](/images/starbucks_captive.jpg)
+![Starbucks Wi-Fi from Google by Chris Messina]({static}/images/starbucks_captive.jpg)
 _[Image by Chris Messina](https://www.flickr.com/photos/factoryjoe/22127717262)_
 
 However, if you were running GNU/Linux like I was at the time, you wouldn't see
@@ -46,7 +46,7 @@ Sometime last year Starbucks introduced "Google Starbucks" Wi-Fi. They now
 require your first name, last name, email, and zip code in order to
 authenticate to their network. 
 
-![Google Starbucks signup page](/images/google_starbucks_signup.png)
+![Google Starbucks signup page]({static}/images/google_starbucks_signup.png)
 
 No worries, I thought. I just need to tweak my script with some random data in
 order to appease the googly sirens. Turns out that I was wrong. The whole
