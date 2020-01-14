@@ -78,7 +78,7 @@ there's a convenient shell variable `$$`.
 Hmm, that's good I suppose, but I still don't know if the process with PID
 `78525`, the one I'm currently typing in, is the correct zsh.
 
-## losf
+## lsof
 
 Oh yeah, I probably should have used `lsof` a long time ago but knowing how to
 get the PID of the current shell makes things a bit easier.
