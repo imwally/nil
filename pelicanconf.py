@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 DEFAULT_LANG = 'en'
 
 AUTHOR = 'Wally Jones'
-SITENAME = '&Nopf;'
+SITENAME = 'Nil'
 SITEURL = 'https://nil.wallyjones.com'
 THEME = 'niltheme'
 PATH = 'content'
