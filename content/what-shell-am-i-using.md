@@ -1,4 +1,4 @@
-Title: What Shell am I Using?
+Title: What Shell Am I Using?
 Date: 2020-01-13T21:19:05-0500
 Category: unix
 
@@ -58,7 +58,7 @@ necessarily tell me the location of the shell I'm currently typing in.
 
 ## ps
 
-Maybe I can find currently running process of the instance of zsh I'm in right now.
+Maybe I can find the currently running process of the instance of zsh I'm in right now.
 
 ```
 ~ % ps 
