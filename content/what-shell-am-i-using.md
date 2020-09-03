@@ -138,4 +138,4 @@ the processes currently running with that shell name. But gathering information
 about the shell you're typing all those commands in to find the shell you're
 using requires a little more poking around. The two easiest solutions, on macOS
 at least, are `lsof` and `fuser`. Activity Monitor also offers up a GUI for
-finding the same information but you need to how to dig into it.
+finding the same information but you need to know how to dig into it.
