@@ -1,4 +1,4 @@
 pelican>=4.5.0
 jinja2>=3.0
 Fabric==2.5.0
-Markdown==2.6.11
+Markdown>=3.5
