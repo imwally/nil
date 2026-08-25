@@ -46,6 +46,7 @@ sha256sum -c --ignore-missing SHA256 miniroot79.img
 miniroot79.img: OK
 ```
 
+
 ## Sign Up for DigitalOcean and Upload miniroot79.img
 
 Once you are signed up and logged in to DigitalOcean, go to Backups &
@@ -63,6 +64,7 @@ to this page to delete the image after your server is up and running.
 
 ![Upload custom image on DigitalOcean]({static}/images/openbsd-do-setup/upload-custom-image.png)
 
+
 ## Create a Droplet
 
 Click Droplets under the COMPUTE section in the left-hand nav. We are going to
@@ -73,11 +75,11 @@ Select a datacenter region that makes sense for you.
 
 Choose the `miniroot79.img` file we uploaded earlier under the Custom Images tab.
 
-![Upload custom image on DigitalOcean]({static}/images/openbsd-do-setup/select-custom-image.png)
+![Select custom miniroot79.img file on DigitalOcean]({static}/images/openbsd-do-setup/select-custom-image.png)
 
 Choose the Basic plan.
 
-![Upload custom image on DigitalOcean]({static}/images/openbsd-do-setup/select-basic-droplet.png)
+![Select Basic / Regular SSD tier Droplet on DigitalOcean]({static}/images/openbsd-do-setup/select-basic-droplet.png)
 
 Under the Authentication section add an SSH Key. DigitalOcean does
 **not** actually add this key but it is required to create the
@@ -89,7 +91,7 @@ Finally, give your droplet a name and click Create Droplet.
 
 Notice the total cost of $4.00/month... nice, dude.
 
-![Upload custom image on DigitalOcean]({static}/images/openbsd-do-setup/select-create-droplet.png)
+![Droplet creation summary showing $4.00/month on DigitalOcean]({static}/images/openbsd-do-setup/select-create-droplet.png)
 
 
 ## Install OpenBSD
@@ -98,12 +100,12 @@ Go to your newly created droplet and click the Web Console button at
 the top right. You will see a modal pop-up about updating the droplet
 console. Just click the Launch Recovery Console button.
 
-![Upload custom image on DigitalOcean]({static}/images/openbsd-do-setup/select-web-console.png)
+![Top of Droplet page showing Web Console button on DigitalOcean]({static}/images/openbsd-do-setup/select-web-console.png)
 
 This opens a new browser window that drops you into a console of the booted up
 `miniroot79.img`. Look at the blue on white text. Beautiful.
 
-![Upload custom image on DigitalOcean]({static}/images/openbsd-do-setup/console-openbsd-boot.png)
+![Web Console booting up miniroot79.img on DigitalOcean]({static}/images/openbsd-do-setup/console-openbsd-boot.png)
 
 Type `i` and press return.
 
@@ -111,7 +113,7 @@ For most of these questions we can go with the default option. Please select
 whatever makes sense for you, but I will try to walk you through a very basic
 setup. Just make sure you give your server a cool hostname.
 
-![Upload custom image on DigitalOcean]({static}/images/openbsd-do-setup/console-install-network-users.png)
+![Web Console showing OpenBSD installation options]({static}/images/openbsd-do-setup/console-install-network-users.png)
 
 * Select the `vio0` network interface.
 * Select `autoconf` for IPv4 and IPv6 addresses. Select `[done]` afterwards because
@@ -136,7 +138,7 @@ equivalent on OpenBSD so installing kernel patches that require a reboot involve
 a little more work. To me this isn't a big inconvenience. There may also be
 arguments around the security of typing into the web console. 
 
-![Upload custom image on DigitalOcean]({static}/images/openbsd-do-setup/console-install-disk.png)
+![Web Console showing OpenBSD disk setup]({static}/images/openbsd-do-setup/console-install-disk.png)
 
 * Use the `(W)hole` disk MBR.
 * Type in your secure passphrase for the full disk encryption.
@@ -158,11 +160,11 @@ too. This should leave us with `bsd`, `bsd.rd`, `base79.tgz`, and
 verified for the sets as they download. After the sets install we can
 select `[done]`.
 
-![Upload custom image on DigitalOcean]({static}/images/openbsd-do-setup/console-install-sets.png)
+![Web Console showing sets installing and verifying]({static}/images/openbsd-do-setup/console-install-sets.png)
 
 OpenBSD is now installed! Press return to reboot. 
 
-![Upload custom image on DigitalOcean]({static}/images/openbsd-do-setup/console-install-complete.png)
+![Web Console showing OpenBSD install has been successfully completed!]({static}/images/openbsd-do-setup/console-install-complete.png)
 
 If you decided to use full disk encryption you will be prompted for
 the passphrase now. You should see the `boot>` prompt after
@@ -174,7 +176,7 @@ droplet and copy the public IP address and SSH in! Make sure you use
 the non-root user we created during installation since we turned off
 root SSH login.
 
-![Upload custom image on DigitalOcean]({static}/images/openbsd-do-setup/terminal-ssh-do-openbsd.png)
+![macOS Terminal with SSH connection to new OpenBSD Droplet server]({static}/images/openbsd-do-setup/terminal-ssh-do-openbsd.png)
 
 You are now SSH'd into your lovely OpenBSD server running on
 DigitalOcean for $4/month. 
