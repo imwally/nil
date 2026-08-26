@@ -103,7 +103,7 @@ console. Just click the Launch Recovery Console button.
 ![Top of Droplet page showing Web Console button on DigitalOcean]({static}/images/openbsd-do-setup/select-web-console.png)
 
 This opens a new browser window that drops you into a console of the booted up
-`miniroot79.img`. Look at the blue on white text. Beautiful.
+`miniroot79.img`. Look at the white on blue text. Beautiful.
 
 ![Web Console booting up miniroot79.img on DigitalOcean]({static}/images/openbsd-do-setup/console-openbsd-boot.png)
 
