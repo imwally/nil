@@ -181,13 +181,13 @@ root SSH login.
 You are now SSH'd into your lovely OpenBSD server running on
 DigitalOcean for $4/month. 
 
-Now would be a great time to head over to OpenBSD Handbook and read up
-on [Post-Installation
-Configuration](https://www.openbsdhandbook.com/installation#post-installation-configuration).
-I would also recommend taking a look at [OpenBSD's FAQ
-Page](https://www.openbsd.org/faq/index.html). Finally, I would
-recommend copying your public SSH key to the server and [turning off
-PasswordAuthentication](https://www.openbsdhandbook.com/secure-openssh)
+Now would be a great time to head over to [OpenBSD's FAQ
+Page](https://www.openbsd.org/faq/index.html) to learn more about the
+system. You maybe have seen it after logging in and running `mail`,
+but in case you missed it, run `man afterboot` for things to check
+after the first complete boot. Finally, I would recommend copying your
+public SSH key to the server and [turning off
+PasswordAuthentication](https://man.openbsd.org/ssh_config#PasswordAuthentication)
 as a bare minimum. 
 
 If you have any questions _please_ do not hesitate to reach out to me,
@@ -197,6 +197,10 @@ running on a cool OpenBSD server.
 
 # Edits 
 
-*Tue Aug 25 17:45:19 EDT 2026: In the curl request I
+* Tue Aug 25 17:45:19 EDT 2026: In the curl request I
 originally wrote arm64 when I meant amd64. This has been fixed. Huge
-shoutout to [Ben](https://bensinclair.com) for catching this!*
+shoutout to [Ben](https://bensinclair.com) for catching this!
+
+* Wed Sep 2 21:41:41 EDT 2026: Removed mentions of and links to a
+resource that is not the best. Just read as many man pages as you can
+to learn more about OpenBSD or refer to [https://www.openbsd.org](https://www.openbsd.org).
